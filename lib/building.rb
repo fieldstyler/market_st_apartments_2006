@@ -7,17 +7,28 @@ class Building
   end
 
   def add_unit(unit)
-    @units = @units << unit
+    #@units << unit  (Had this initially but doesn't keep units inside)
+    added_units = []
+    added_units << unit
+    @units = added_units
+    # @units.each do |unit|
   end
 
   def renters
-    add_unit(@units)
-    # @units = building.units
+    #WHY IS @units EMPTY????
+    #I understand how to do this in pry. Getting exactly what I want.
+    #But can't figure out how to do it with method.
     renter_names = @units.each do |unit|
-      unit.renter[0].name
+      unit.renter.name
     end
-    binding.pry
+    # binding.pry
     renter_names
     # add_renter(renter)
   end
+
+  def average_rent
+    #takes rent from each unit and divides by total number of units
+  end
+
+
 end
