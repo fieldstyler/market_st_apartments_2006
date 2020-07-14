@@ -28,4 +28,9 @@ class BuildingTest < MiniTest::Test
     assert_equal [unit1, unit2], building.units
   end
 
+  def test_building_starts_with_no_renters
+    building = Building.new
+    assert_equal [], building.renters
+  end
+
 end
