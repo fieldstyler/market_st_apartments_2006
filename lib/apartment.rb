@@ -1,9 +1,11 @@
 require "pry"
 class Apartment
 
-  attr_reader :apartment_info
+  attr_reader :apartment_info,
+              :renter
   def initialize(apartment_info)
     @apartment_info = apartment_info
+    @renter = renter
   end
 
   def number
