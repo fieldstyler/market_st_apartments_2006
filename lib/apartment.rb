@@ -17,4 +17,8 @@ class Apartment
   def bathrooms
     apartment_info[:bathrooms]
   end
+
+  def bedrooms
+    apartment_info[:bedrooms]
+  end
 end
