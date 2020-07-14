@@ -9,4 +9,8 @@ class Apartment
   def number
     apartment_info[:number]
   end
+
+  def monthly_rent
+    apartment_info[:monthly_rent]
+  end
 end
