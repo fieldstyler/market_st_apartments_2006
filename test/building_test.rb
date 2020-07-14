@@ -33,4 +33,21 @@ class BuildingTest < MiniTest::Test
     assert_equal [], building.renters
   end
 
+  def test_building_can_add_renters
+    building = Building.new
+    renter1 = Renter.new("Aurora")
+    renter2 = Renter.new("Tim")
+    unit1 = Apartment.new({number: "A1", monthly_rent: 1200, bathrooms: 1, bedrooms: 1})
+    unit2 = Apartment.new({number: "B2", monthly_rent: 999, bathrooms: 2, bedrooms: 2})
+    building.add_unit(unit1)
+    building.add_unit(unit2)
+    unit1.add_renter(renter1)
+    unit2.add_renter(renter2)
+    binding.pry
+    assert_equal renter1, unit1.renter
+    assert_equal ["Aurora"], building.renters
+    # assert_equal renter2, unit2.renter
+    # assert_equal ["Aurora", "Tim"], building.renters
+  end
+
 end
