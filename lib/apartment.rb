@@ -5,4 +5,8 @@ class Apartment
   def initialize(apartment_info)
     @apartment_info = apartment_info
   end
+
+  def number
+    apartment_info[:number]
+  end
 end
