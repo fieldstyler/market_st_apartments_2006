@@ -23,4 +23,10 @@ class Apartment
   def bedrooms
     apartment_info[:bedrooms]
   end
+
+  def add_renter(renter)
+    apartment_occupant = []
+    apartment_occupant << renter
+    @renter = apartment_occupant[0]
+  end
 end
